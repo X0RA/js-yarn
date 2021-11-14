@@ -14,7 +14,7 @@ This is a very small web renderer for Yarn JSON files, like a little choose your
  - [ ] Jumps
  - [ ] Conditionals / Expressions / Vairables (store in cookie??) 
 ## Usage
-This is pretty stripped down. This currently has support for initial dialogue, choices and a accompanying image or video file (in mp4 format). 
+This is pretty stripped down. This currently has support for initial dialogue, choices and a accompanying image or video file (in mp4 format (webm didn't work on iphones?)). 
 
 > Today Mittens and Yizzard are walking through the forest. They encounter a fork in the road, which way should they go?
 [[Right|1right_node]]
@@ -40,9 +40,9 @@ What I did was download the dropbox sync client, then use the [Yarn desktop clie
 Afterwards I am able to get public share link (going to dropbox and clicking share) then edit the url slightly so it looks like the following:
 
 Original:
-**https://www.dropbox.com**/s/qwertyuiop123/exampleyarn.json?dl=0
+https://www.dropbox.com/s/qwertyuiop123/exampleyarn.json?dl=0
 Edited:
-***https://dl.dropboxusercontent.com**/s/qwertyuiop123/exampleyarn.json*
+https://dl.dropboxusercontent.com/s/qwertyuiop123/exampleyarn.json
 
 This allowed me to just ctl+s for the website to update and remove the need for manual file uploading
 
