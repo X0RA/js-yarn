@@ -6,7 +6,7 @@ This is a very small web renderer for Yarn JSON files, like a little choose your
  - [x] Dialogue and options
  - [x] Pictures
  - [x] Videos
- - [ ] Ability to specify who's talking with "Person: talking" on new line and click through dialogue
+ - [x] Ability to specify who's talking with "Person: talking" on new line and click through dialogue
  - [x] Fix sizing for more options
  - [ ] Sub option dialogue / Shortcut options supported by arrows '->' 
  - [ ] Nested shortcut options?
@@ -14,7 +14,7 @@ This is a very small web renderer for Yarn JSON files, like a little choose your
  - [ ] Jumps
  - [ ] Conditionals / Expressions / Vairables (store in cookie??) 
 ## Usage
-This is pretty stripped down. This currently has support for initial dialogue, choices and a accompanying image or video file (in webm format). 
+This is pretty stripped down. This currently has support for initial dialogue, choices and a accompanying image or video file (in mp4 format). 
 
 > Today Mittens and Yizzard are walking through the forest. They encounter a fork in the road, which way should they go?
 [[Right|1right_node]]

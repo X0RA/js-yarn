@@ -1,20 +1,24 @@
-#flavour_content{
-    height: 500px;
-    width: auto;
-}
-
 #content video, #content img{
-    height: 500px;
+    width: 600px;
+    height: auto;
     display: table;
     margin: 0 auto;
     border: 0.07em solid rgba(0,0,0,0.1);
 }
 
-#dialogue {
-    padding: 20px;
-    padding-left: 0px;
+#flavour_content{
+    width: 600px;
+    height: auto;
+}
+
+#storytext:first-child {
+    padding-top: 20px;
+}
+#storytext{
     font-weight: bold;
 }
+
+
 
 #options {
     width: 100%;
