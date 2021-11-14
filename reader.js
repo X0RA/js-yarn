@@ -21,11 +21,11 @@ function renderNode(node) {
     img: Array.from(node.body.matchAll(/\img](.*?)\[\/img/g), (x) => x[1])[0],
   };
   if(node.image == undefined) {
-    flavour_img.empty()
-    flavour_img.animate({height:'0px'}, 250);
+    flavour_content.empty()
+    flavour_content.animate({height:'0px'}, 250);
   } else {
-    flavour_img.animate({height:'500px'}, 250);
-    flavour_img.html(node.image);
+    flavour_content.animate({height:'500px'}, 250);
+    flavour_content.html(node.image);
   }
   options.empty();
   dialogue_text.text(node_info.text_prompt);
@@ -34,6 +34,7 @@ function renderNode(node) {
       `<td id='${option.next_node}'><p class='col' >${option.text_prompt}</p> </td>`
     );
   });
+  $('td').css("width", (100 / node_info.options.length) + "%")
   $("td").click(function () {
     next_node = text_json.find((node) => node.title === $(this).attr("id"));
     renderNode(next_node);
@@ -43,7 +44,7 @@ const preloadImage = (src, node) =>
   new Promise((r) => {
     node.image = new Image();
     node.image.onload = r;
-    node.image.id = "flavour_img";
+    node.image.id = "flavour_content";
     node.image.onerror = r;
     node.image.src = src;
   });
@@ -86,15 +87,14 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
     Promise.all(image_promises).then(() => {
-      $("body")
-        .html(`<div class="position-absolute top-50 start-50 translate-middle">
-        <div id='flavour_img'></div>
+      $("#content")
+        .html(`
+        <div id='flavour_content'></div>
             <p id="dialogue"></p>
             <table class='table'>
                 <tr id="options"></tr>
-            </table>
-          </div>`);
-      flavour_img = $("#flavour_img");
+            </table>`);
+      flavour_content = $("#flavour_content");
       dialogue_text = $("#dialogue");
       options = $("#options");
       node = text_json.find((node) => node.title === "Start");

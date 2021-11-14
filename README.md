@@ -7,7 +7,7 @@ This is a very small web renderer for Yarn JSON files, like a little choose your
  - [x] Pictures
  - [x] Videos
  - [ ] Ability to specify who's talking with "Person: talking" on new line and click through dialogue
- - [ ] Fix sizing for more options
+ - [x] Fix sizing for more options
  - [ ] Sub option dialogue / Shortcut options supported by arrows '->' 
  - [ ] Nested shortcut options?
  - [ ] Alternative themes?
